@@ -29,6 +29,7 @@ class HeadandLiftingPlatform: public MotorUnion
 
         /* JU */
 	    void GetObjectRotate_JU();
+        float rotate_angle;
 
     private:
         int FIRST_HEAD_MOTOR_ID,
@@ -37,9 +38,6 @@ class HeadandLiftingPlatform: public MotorUnion
             DisMotor8ToCenter,
             DisKinectToMotor8,
             DisShoulder2Waist;
-        
-        /* JU */
-        float rotate_angle;
 
         /* Matrix */
         cv::Mat *R_ID8;

@@ -12,7 +12,7 @@ Steering::Steering(const vector<unsigned char> &IDArray,
     SetMotor_CenterScale(steering_LF, 0); //Motor center scale shift
     SetMotor_CenterScale(steering_RF, 0);
     SetMotor_CenterScale(steering_LB, 0);
-    SetMotor_CenterScale(steering_RB, 550);
+    SetMotor_CenterScale(steering_RB, 0);
 }
 
 void Steering::TurnStraight()
