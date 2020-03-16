@@ -53,9 +53,7 @@ public:
 	const float &GetMotor_Angle(const unsigned char &idx) const; // in dregree
 	
 	void SetMotor_Angle(const unsigned char &idx, const float &angle) const;
-
-	void SetMotor_Angle(const unsigned char &idx, const float &angle) const;
-
+	
 protected:
 	const float &GetMotor_Scale2RPM(const unsigned char &idx) const;
 	const short &GetMotor_CenterScale(const unsigned char &idx) const;
