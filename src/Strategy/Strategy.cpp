@@ -24,7 +24,10 @@ void Strategy::select_strategy(std::string strategy_name)
         else if (strategy_name == "Joe_task")
         {
             cJoe_task = new Joe_task;
-            cJoe_task->slam_test();
+            // cJoe_task->slam_test();
+            cJoe_task->Task_1();
+            terminate_strategy();
+            break;
         }
         else
             ;

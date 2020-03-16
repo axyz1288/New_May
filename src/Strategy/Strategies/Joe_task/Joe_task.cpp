@@ -12,108 +12,146 @@ Joe_task::~Joe_task()
 
 void Joe_task::Task_1()
 {
+    CRightArm->ResetAllMotorAngle();
+    CLeftArm->ResetAllMotorAngle();
+
     //Start->1
     CMobilePlatform->MoveForward(0.2, 400);
-    CMobilePlatform->SelfTurn(84, 400);
-    CMobilePlatform->MoveForward(2.1, 400);
-    CMobilePlatform->SelfTurn(-84, 400);
-    //雙手預備
-    CRightArm->GotoPosition(0, 400, -200, 0, 0, -20, 0);
-    CLeftArm->GotoPosition(0, 400, -200, 0, 0, 0, 0);
+    CMobilePlatform->SelfTurn(90, 400);
+    CMobilePlatform->MoveForward(2.0, 400);
+    CMobilePlatform->SelfTurn(-110, 400);
+    CMobilePlatform->MoveForward(0.25, 400);
+
+    // 雙手預備
+    CRightArm->GotoPosition(0, 0, 0, 0, 220, -300, 0);
+    CLeftArm->GotoPosition(0, 0, 0, 0, 220, -300, 0);
+
+    /* DDPG */
+    /* Stack Bowls */
+
+    CRightArm->GotoPosition(0, 0, 0, 0, 220, -250, 0);
+    CRightArm->GotoPosition(0, 0, 0, 0, 300, -250, 0);
+    CRightArm->GotoPosition(0, 0, 0, 0, 350, -250, 0);
+    CRightArm->GotoPosition(0, 0, 0, 0, 350, -180, 0);
+
+    CMobilePlatform->SelfTurn(22, 400);
+    CMobilePlatform->MoveLeft(0.5, 400);
+    CMobilePlatform->MoveForward(1.5, 400);
+
+    CMobilePlatform->SelfTurn(-90, 400);
     CMobilePlatform->MoveForward(0.3, 400);
-    CMobilePlatform->SelfTurn(-30, 400);
-    CMobilePlatform->MoveForward(0.15, 400);
-    CLeftArm->ReleaseObj();
-    //左手抓碗
-    CLeftArm->GotoPosition(30, 450, -150, 100, 0, -20, 0);
-    CLeftArm->GotoPosition(30, 550, -150, 100, 0, -20, 0);
-    CLeftArm->GotoPosition(30, 550, -260, 100, 0, -20, 0);
-    CLeftArm->GraspObj(-20);
-    //右手抓碗
-    CLeftArm->GotoPosition(30, 550, -200, 100, 0, -20, 0);
-    CRightArm->GotoPosition(0, 400, -150, 0, 0, 0, 0);
-    CRightArm->GotoPosition(0, 500, -150, 0, 0, 0, 0);
-    CRightArm->GotoPosition(0, 500, -150, 0, 0, 0, -40);
-    CRightArm->GotoPosition(0, 500, -150, -100, 0, 0, -40);
-    CRightArm->GotoPosition(-20, 500, -150, -100, 0, 0, -40);
-    CRightArm->GotoPosition(-20, 550, -200, -130, 0, 0, -40);
-    CRightArm->GotoPosition(-20, 550, -270, -130, 0, 0, -40);
-    CRightArm->GraspObj(-30);
-    //疊碗
-    CRightArm->GotoPosition(-20, 550, -200, -130, 0, 0, -40);
-    CRightArm->GotoPosition(-20, 550, -50, -130, 0, 0, -40);
-    CLeftArm->GotoPosition(30, 550, -200, 250, 0, -20, 0);
-    CLeftArm->GotoPosition(30, 550, -200, 300, 0, -20, 0);
-    CRightArm->GotoPosition(-40, 550, -50, -250, 0, 0, -40);
-    CRightArm->GotoPosition(-60, 550, -50, -280, 0, 0, -40);
-    CRightArm->GotoPosition(-60, 550, -130, -280, 0, 0, -40);
-    CRightArm->ReleaseObj();
-    CRightArm->GotoPosition(-60, 550, -50, -280, 0, 0, -40);
-    CRightArm->GotoPosition(0, 550, -50, -10, 0, 0, 0);
-    CRightArm->GotoPosition(0, 450, -50, 0, 0, 0, 0);
-    CLeftArm->GotoPosition(30, 550, -200, 250, 0, -20, 0);
+    CMobilePlatform->SelfTurn(-40, 400);
+    CMobilePlatform->MoveForward(0.1, 400);
 
-    //1->2
-    CMobilePlatform->SelfTurn(34, 400);
-    CMobilePlatform->MoveLeft(0.15, 400);
+    /* DDPG */
+    /* Stack Bowls */
+
+    CMobilePlatform->MoveBackward(0.2, 400);
+    CMobilePlatform->SelfTurn(40, 400);
+    CMobilePlatform->MoveForward(1, 400);
+    CMobilePlatform->SelfTurn(-90, 400);
+
+    /* 托盤 */
+
+    CMobilePlatform->SelfTurn(90, 400);
     CMobilePlatform->MoveForward(0.5, 400);
-    CMobilePlatform->SelfTurn(-30, 400);
-    //右手抓碗
-    CRightArm->GotoPosition(0, 450, -260, 0, 0, 0, 0);
-    CRightArm->GotoPosition(0, 500, -260, 0, 0, 0, 0);
-    CRightArm->GotoPosition(0, 550, -260, -20, 0, 0, 0);
-    CRightArm->GotoPosition(0, 580, -260, -20, 0, 0, 0);
-    CRightArm->GraspObj(-20);
-    //疊碗
-    CRightArm->GotoPosition(0, 580, -100, -20, 0, 0, 0);
-    CLeftArm->GotoPosition(30, 550, -200, 300, 0, -20, 0);
-    CRightArm->GotoPosition(-40, 550, -100, -150, 0, 0, 0);
-    CRightArm->GotoPosition(-40, 550, -100, -150, 0, 0, 0);
-    CRightArm->GotoPosition(-50, 550, -100, -150, 0, 20, 0);
-    CRightArm->GotoPosition(-50, 550, -100, -280, 0, 20, 0);
-    CRightArm->GotoPosition(-50, 550, -120, -280, 0, 20, 0);
-    CRightArm->ReleaseObj();
-    CRightArm->GotoPosition(-50, 550, -100, -280, 0, 20, 0);
-    CRightArm->GotoPosition(-20, 550, -100, -150, 0, 0, 0);
-    CRightArm->GotoPosition(0, 450, -100, 0, 0, 0, 0);
-    CLeftArm->GotoPosition(0, 450, -200, 0, 0, 0, 0);
-    CLeftArm->GotoPosition(0, 450, -100, 0, 0, 0, 0);
 
-    //2->3
-    CMobilePlatform->SelfTurn(35, 400); //not sure
-    CMobilePlatform->MoveForward(1, 400);
-    CMobilePlatform->SelfTurn(-82, 400);
-    CMobilePlatform->MoveForward(1, 400);
-    CMobilePlatform->SelfTurn(-82, 400);
-    CMobilePlatform->MoveForward(0.1, 400);
-    //碗放進托盤
-    CLeftArm->GotoPosition(0, 450, -180, 0, 0, 0, 0);
-    CLeftArm->ReleaseObj();
-    CLeftArm->GotoPosition(0, 450, -100, 0, 0, 0, 0);
-    //抓托盤
 
-    //3->4
-    CMobilePlatform->MoveBackward(0.1, 400);
-    CMobilePlatform->SelfTurn(82, 400);
-    CMobilePlatform->MoveForward(1, 400);
-    //給人
 
-    //4->5
-    CMobilePlatform->SelfTurn(-82, 400);
-    CMobilePlatform->MoveForward(1, 400);
-    CMobilePlatform->SelfTurn(-82, 400);
-    CMobilePlatform->MoveForward(0.1, 400);
-    //抓桶子
 
-    //5->6
-    CMobilePlatform->MoveBackward(0.1, 400);
-    CMobilePlatform->SelfTurn(-82, 400);
-    CMobilePlatform->MoveForward(1, 400);
-    CMobilePlatform->SelfTurn(-82, 400);
-    //給桶子
-    CMobilePlatform->SelfTurn(-82, 400);
-    CMobilePlatform->MoveForward(2.3, 400);
-    CMobilePlatform->SelfTurn(180, 400);
+
+    // CMobilePlatform->MoveForward(0.15, 400);
+    // CLeftArm->ReleaseObj();
+    // //左手抓碗
+    // CLeftArm->GotoPosition(30, 450, -150, 100, 0, -20, 0);
+    // CLeftArm->GotoPosition(30, 550, -150, 100, 0, -20, 0);
+    // CLeftArm->GotoPosition(30, 550, -260, 100, 0, -20, 0);
+    // CLeftArm->GraspObj(-20);
+    // //右手抓碗
+    // CLeftArm->GotoPosition(30, 550, -200, 100, 0, -20, 0);
+    // CRightArm->GotoPosition(0, 400, -150, 0, 0, 0, 0);
+    // CRightArm->GotoPosition(0, 500, -150, 0, 0, 0, 0);
+    // CRightArm->GotoPosition(0, 500, -150, 0, 0, 0, -40);
+    // CRightArm->GotoPosition(0, 500, -150, -100, 0, 0, -40);
+    // CRightArm->GotoPosition(-20, 500, -150, -100, 0, 0, -40);
+    // CRightArm->GotoPosition(-20, 550, -200, -130, 0, 0, -40);
+    // CRightArm->GotoPosition(-20, 550, -270, -130, 0, 0, -40);
+    // CRightArm->GraspObj(-30);
+    // //疊碗
+    // CRightArm->GotoPosition(-20, 550, -200, -130, 0, 0, -40);
+    // CRightArm->GotoPosition(-20, 550, -50, -130, 0, 0, -40);
+    // CLeftArm->GotoPosition(30, 550, -200, 250, 0, -20, 0);
+    // CLeftArm->GotoPosition(30, 550, -200, 300, 0, -20, 0);
+    // CRightArm->GotoPosition(-40, 550, -50, -250, 0, 0, -40);
+    // CRightArm->GotoPosition(-60, 550, -50, -280, 0, 0, -40);
+    // CRightArm->GotoPosition(-60, 550, -130, -280, 0, 0, -40);
+    // CRightArm->ReleaseObj();
+    // CRightArm->GotoPosition(-60, 550, -50, -280, 0, 0, -40);
+    // CRightArm->GotoPosition(0, 550, -50, -10, 0, 0, 0);
+    // CRightArm->GotoPosition(0, 450, -50, 0, 0, 0, 0);
+    // CLeftArm->GotoPosition(30, 550, -200, 250, 0, -20, 0);
+
+    // //1->2
+    // CMobilePlatform->SelfTurn(34, 400);
+    // CMobilePlatform->MoveLeft(0.15, 400);
+    // CMobilePlatform->MoveForward(0.5, 400);
+    // CMobilePlatform->SelfTurn(-30, 400);
+    // //右手抓碗
+    // CRightArm->GotoPosition(0, 450, -260, 0, 0, 0, 0);
+    // CRightArm->GotoPosition(0, 500, -260, 0, 0, 0, 0);
+    // CRightArm->GotoPosition(0, 550, -260, -20, 0, 0, 0);
+    // CRightArm->GotoPosition(0, 580, -260, -20, 0, 0, 0);
+    // CRightArm->GraspObj(-20);
+    // //疊碗
+    // CRightArm->GotoPosition(0, 580, -100, -20, 0, 0, 0);
+    // CLeftArm->GotoPosition(30, 550, -200, 300, 0, -20, 0);
+    // CRightArm->GotoPosition(-40, 550, -100, -150, 0, 0, 0);
+    // CRightArm->GotoPosition(-40, 550, -100, -150, 0, 0, 0);
+    // CRightArm->GotoPosition(-50, 550, -100, -150, 0, 20, 0);
+    // CRightArm->GotoPosition(-50, 550, -100, -280, 0, 20, 0);
+    // CRightArm->GotoPosition(-50, 550, -120, -280, 0, 20, 0);
+    // CRightArm->ReleaseObj();
+    // CRightArm->GotoPosition(-50, 550, -100, -280, 0, 20, 0);
+    // CRightArm->GotoPosition(-20, 550, -100, -150, 0, 0, 0);
+    // CRightArm->GotoPosition(0, 450, -100, 0, 0, 0, 0);
+    // CLeftArm->GotoPosition(0, 450, -200, 0, 0, 0, 0);
+    // CLeftArm->GotoPosition(0, 450, -100, 0, 0, 0, 0);
+
+    // //2->3
+    // CMobilePlatform->SelfTurn(35, 400); //not sure
+    // CMobilePlatform->MoveForward(1, 400);
+    // CMobilePlatform->SelfTurn(-82, 400);
+    // CMobilePlatform->MoveForward(1, 400);
+    // CMobilePlatform->SelfTurn(-82, 400);
+    // CMobilePlatform->MoveForward(0.1, 400);
+    // //碗放進托盤
+    // CLeftArm->GotoPosition(0, 450, -180, 0, 0, 0, 0);
+    // CLeftArm->ReleaseObj();
+    // CLeftArm->GotoPosition(0, 450, -100, 0, 0, 0, 0);
+    // //抓托盤
+
+    // //3->4
+    // CMobilePlatform->MoveBackward(0.1, 400);
+    // CMobilePlatform->SelfTurn(82, 400);
+    // CMobilePlatform->MoveForward(1, 400);
+    // //給人
+
+    // //4->5
+    // CMobilePlatform->SelfTurn(-82, 400);
+    // CMobilePlatform->MoveForward(1, 400);
+    // CMobilePlatform->SelfTurn(-82, 400);
+    // CMobilePlatform->MoveForward(0.1, 400);
+    // //抓桶子
+
+    // //5->6
+    // CMobilePlatform->MoveBackward(0.1, 400);
+    // CMobilePlatform->SelfTurn(-82, 400);
+    // CMobilePlatform->MoveForward(1, 400);
+    // CMobilePlatform->SelfTurn(-82, 400);
+    // //給桶子
+    // CMobilePlatform->SelfTurn(-82, 400);
+    // CMobilePlatform->MoveForward(2.3, 400);
+    // CMobilePlatform->SelfTurn(180, 400);
 }
 
 void Joe_task::Task_2()

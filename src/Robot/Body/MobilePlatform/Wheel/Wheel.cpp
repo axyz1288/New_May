@@ -10,7 +10,7 @@ Wheel::Wheel(const vector<unsigned char> &IDArray,
       wheel_gear_ratio(1.8),
       wheel_radius(0.075),
       scale2meter_ms(GetMotor_Scale2RPM(wheel_LF) * wheel_gear_ratio * (1.667 * 1e-5) * 2 * M_PI * wheel_radius),
-      phase(20)
+      phase(50)
 {
     SetAllMotorsTorqueEnable(false);
     delay = 0;
