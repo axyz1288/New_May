@@ -51,6 +51,8 @@ public:
 	const float &GetMotor_PresentVelocity(const unsigned char &idx) const;
 	const float &GetMotor_PresentTorque(const unsigned char &idx) const;
 	const float &GetMotor_Angle(const unsigned char &idx) const; // in dregree
+	
+	void SetMotor_Angle(const unsigned char &idx, const float &angle) const;
 
 	void SetMotor_Angle(const unsigned char &idx, const float &angle) const;
 
