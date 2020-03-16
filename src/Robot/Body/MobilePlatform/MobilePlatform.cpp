@@ -180,7 +180,7 @@ void MobilePlatform::TurnCircleByRadius(const float &radius, const float &distan
 
 void MobilePlatform::SelfTurn(const float &distance, const int &velocity)
 {
-	float coefficient = 2.3; //this coefficient is by testing
+	float coefficient = 2.25; //this coefficient is by testing
 	int tmp_velocity = velocity;
 	if (distance < 0)
 		tmp_velocity = -abs(velocity);

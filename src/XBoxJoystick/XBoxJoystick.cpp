@@ -65,7 +65,8 @@ void XBoxJoystick::LeftStickMotion()
         x = copysign(abs(x) - threshold < 0 ? 0 : abs(x) - threshold, x);
         y = copysign(abs(y) - threshold < 0 ? 0 : abs(y) - threshold, y);
         const int angle = atan2f(x, y) * Rad2Angle;
-        CMobilePlatform->Turn(angle);
+        if (x > 100 && y > 100)
+            CMobilePlatform->Turn(angle);
     }
 }
 

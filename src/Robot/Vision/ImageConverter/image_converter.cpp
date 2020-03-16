@@ -5,9 +5,7 @@ ImageConverter::ImageConverter() : it_(nh_)
   this->imge_pub_ = this->it_.advertise("/CNN/kj/img", 1);
   this->imge_pubd_ = this->it_.advertise("/CNN/kj/img_d", 1);
 }
-ImageConverter::~ImageConverter()
-{
-}
+
 void ImageConverter::SubImgFromCamera()
 {
   while (ros::ok)

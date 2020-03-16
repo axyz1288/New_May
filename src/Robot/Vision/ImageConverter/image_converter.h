@@ -20,17 +20,15 @@ class ImageConverter
   image_transport::Subscriber intelD435i_image_sub_;
   image_transport::Subscriber intelD435i_depth_sub_;
 
-
   ros::NodeHandle n_ros;
   ros::Subscriber Cam_Calib_sub_;
   ros::Subscriber Orientation;
   ros::Subscriber intelD435i_Cam_Calib_sub_;
 
-
 public:
   //Constructor
   ImageConverter();
-  ~ImageConverter();
+  ~ImageConverter(){};
 
   //function
   void SubImgFromCamera();

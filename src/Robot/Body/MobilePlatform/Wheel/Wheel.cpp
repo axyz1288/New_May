@@ -45,7 +45,7 @@ void Wheel::Stop()
 
 const int Wheel::CalculateDistanceTime(const float &distance, const int &velocity)
 {
-    return (abs(distance) - softstart_distance) / (abs(velocity) * scale2meter_ms);
+    return (abs(distance) - 2 * softstart_distance) / (abs(velocity) * scale2meter_ms);
 }
 
 void Wheel::Wait(const int waiting_time_ms) const
@@ -109,5 +109,5 @@ void Wheel::SoftStart(const int &velocity_LF, const int &velocity_RF, const int 
     const int average_velocity = (compare_sign * velocity_LF + velocity_RF + compare_sign * velocity_LB + velocity_RB) / 4;
 
     // calculate softstart moving distance
-    softstart_distance = (delay * (phase * average_present_velocity + (phase + 1) * phase / 2 * average_velocity_delta)) * scale2meter_ms;
+    softstart_distance = abs((delay * (phase * average_present_velocity + (phase + 1) * phase / 2 * average_velocity_delta))) * scale2meter_ms;
 }

@@ -52,6 +52,8 @@ public:
 	const float &GetMotor_PresentTorque(const unsigned char &idx) const;
 	const float &GetMotor_Angle(const unsigned char &idx) const; // in dregree
 
+	void SetMotor_Angle(const unsigned char &idx, const float &angle) const;
+
 protected:
 	const float &GetMotor_Scale2RPM(const unsigned char &idx) const;
 	const short &GetMotor_CenterScale(const unsigned char &idx) const;
@@ -67,7 +69,6 @@ protected:
 	const int &GetMotor_Min_Torque_Limit(const unsigned char &idx) const;
 	/* Set Motor Data */
 	void SetMotor_CenterScale(const unsigned char &idx, const short &motor_center_scale) const;
-	void SetMotor_Angle(const unsigned char &idx, const float &angle) const;
 	void SetMotor_Velocity(const unsigned char &idx, const int &velocity) const;
 	void SetMotor_Velocity_withTime(const unsigned char &idx, const short &ms) const;
 	void SetMotor_Torque(const unsigned char &idx, const short &torque) const;
