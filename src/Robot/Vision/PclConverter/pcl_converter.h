@@ -1,30 +1,19 @@
 #pragma once
-#include <iostream>
 #include <ros/ros.h>
-// #include <geometry_msgs/Point.h>
+#include <geometry_msgs/Point.h>
 #include <sensor_msgs/PointCloud2.h>
-// #include <pcl_conversions/pcl_conversions.h>
-// #include <pcl/point_cloud.h>
-// #include <pcl/point_types.h>
-// #include <pcl/io/io.h>
-// #include <pcl/io/pcd_io.h>
-// #include <pcl/features/normal_3d_omp.h>
-// #include <pcl/common/transforms.h>
-// #include <pcl/visualization/pcl_visualizer.h>
-// #include <pcl/filters/voxel_grid_occlusion_estimation.h>
-// #include <pcl/registration/icp.h>
-#include <pcl/common/common_headers.h>
-// #include <pcl/console/parse.h>
-// #include <pcl/io/ply_io.h>
-#include <pcl/filters/voxel_grid.h>
+#include <pcl_ros/point_cloud.h>
+#include <pcl_conversions/pcl_conversions.h>
+#include <pcl_ros/filters/voxel_grid.h>
+#include <pcl_ros/transforms.h>
 #include <spec_msg/spec_points.h>
 #include <spec_msg/float32_1d.h>
 #include <spec_msg/float32_2d.h>
+#include <iostream>
 #include <chrono>
 #include <thread>
 #include <vector>
 
-//#include <pcl/visualization/cloud_viewer.h>
 using namespace std;
 
 class PclConverter
@@ -42,7 +31,7 @@ class PclConverter
 public:
   //constructor
   PclConverter();
-  ~PclConverter();
+  ~PclConverter(){};
 
   //function
   void SubCloudFromCamera();

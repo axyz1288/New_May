@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -std=c++11 -std=c++11 -pthread -g  -shared -Wl,-soname,libMouseEvent.so -o libMouseEvent.so CMakeFiles/MouseEvent.dir/mouse_event.cpp.o 

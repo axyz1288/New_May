@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -std=c++11 -std=c++11 -pthread -std=c++11 -pthread -g  -shared -Wl,-soname,libgtest_main.so -o libgtest_main.so CMakeFiles/gtest_main.dir/src/gtest_main.cc.o  -L/home/aiRobots/New_May/build/gtest/gtest/src -lpthread libgtest.so -lpthread -Wl,-rpath,/home/aiRobots/New_May/build/gtest/gtest/src:/home/aiRobots/New_May/build/gtest/gtest 

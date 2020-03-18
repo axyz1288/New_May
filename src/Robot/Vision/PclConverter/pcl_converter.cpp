@@ -10,9 +10,7 @@ PclConverter::PclConverter()
   pcl_ptr_on_the_top_ = nh_.advertise<spec_msg::spec_points>("/GU_ptr", 1);
 }
 
-PclConverter::~PclConverter()
-{
-}
+
 void PclConverter::SubCloudFromCamera()
 {
   while (ros::ok)

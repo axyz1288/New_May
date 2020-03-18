@@ -1,7 +1,7 @@
 #pragma once
 #include "../Vision/ImageProcessing/ImageProcessing.h"
 #include "../Vision/ImageConverter/image_converter.h"
-// #include "../Vision/PclConverter/pcl_converter.h"
+#include "../Vision/PclConverter/pcl_converter.h"
 #include "../Vision/MouseEvent/mouse_event.h"
 // #include "../Vision/Yolo/yolo.h"
 
@@ -11,9 +11,8 @@ public:
   Vision();
   ~Vision();
 
-  // subclass
   ImageConverter *CImageConverter;
-  // PclConverter *CPclConverter;
+  PclConverter *CPclConverter;
   MouseEvent *CMouseEvent;
   ImageProcessing *CImageProcessing;
   // Yolo *CYolo;

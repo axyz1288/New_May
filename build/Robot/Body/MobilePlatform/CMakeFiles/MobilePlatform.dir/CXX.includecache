@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aiRobots/New_May/src/Robot/Body/MobilePlatform/./Steering/Steering.h
+../../MotorUnion/MotorUnion.h
+/home/aiRobots/New_May/src/Robot/Body/MobilePlatform/MotorUnion/MotorUnion.h
+
+/home/aiRobots/New_May/src/Robot/Body/MobilePlatform/./Wheel/Wheel.h
+../../MotorUnion/MotorUnion.h
+/home/aiRobots/New_May/src/Robot/Body/MobilePlatform/MotorUnion/MotorUnion.h
+
+/home/aiRobots/New_May/src/Robot/Body/MobilePlatform/MobilePlatform.cpp
+MobilePlatform.h
+/home/aiRobots/New_May/src/Robot/Body/MobilePlatform/MobilePlatform.h
+
+/home/aiRobots/New_May/src/Robot/Body/MobilePlatform/MobilePlatform.h
+./Steering/Steering.h
+/home/aiRobots/New_May/src/Robot/Body/MobilePlatform/./Steering/Steering.h
+./Wheel/Wheel.h
+/home/aiRobots/New_May/src/Robot/Body/MobilePlatform/./Wheel/Wheel.h
+
