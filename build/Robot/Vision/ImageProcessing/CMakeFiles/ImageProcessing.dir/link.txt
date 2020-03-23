@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC  -std=c++11 -std=c++11 -pthread -g  -shared -Wl,-soname,libImageProcessing.so -o libImageProcessing.so CMakeFiles/ImageProcessing.dir/ImageProcessing.cpp.o 

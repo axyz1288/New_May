@@ -1,2 +1,0 @@
-Robot/Vision/PclConverter/spec_msg
--DCATKIN_DEVEL_PREFIX=/home/aiRobots/New_May/devel -DCMAKE_INSTALL_PREFIX=/home/aiRobots/New_May/install -G Unix Makefiles
