@@ -19,13 +19,13 @@ Arm::Arm(const vector<unsigned char> &IDArray,
 
 void Arm::InitArmMotor()
 {
-	SetMotor_Velocity(FIRST_SHOULDER_ID, 1500); // Pro200
-	SetMotor_Velocity(FIRST_HAND_ID, 1500);		// Pro200
-	SetMotor_Velocity(FIRST_HAND_ID + 1, 1500); // Pro200
-	SetMotor_Velocity(FIRST_HAND_ID + 2, 2000); // Pro20
-	SetMotor_Velocity(FIRST_HAND_ID + 3, 2000); // Pro20
+	SetMotor_Velocity(FIRST_SHOULDER_ID, 1000); // Pro200
+	SetMotor_Velocity(FIRST_HAND_ID, 1000);		// Pro200
+	SetMotor_Velocity(FIRST_HAND_ID + 1, 1000); // Pro200
+	SetMotor_Velocity(FIRST_HAND_ID + 2, 1500); // Pro20
+	SetMotor_Velocity(FIRST_HAND_ID + 3, 1500); // Pro20
 	SetMotor_Velocity(FIRST_HAND_ID + 4, 500);  // Mx106
-	SetMotor_Velocity(FIRST_HAND_ID + 5, 2000); // Pro20
+	SetMotor_Velocity(FIRST_HAND_ID + 5, 1500); // Pro20
 	SetMotor_Velocity(FIRST_HAND_ID + 6, 500);  // Mx106
 }
 

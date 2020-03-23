@@ -1,6 +1,5 @@
 #pragma once
 #include <string>
-#include "Strategies/Joe_task/Joe_task.h"
 
 class Strategy
 {
@@ -16,5 +15,4 @@ private:
 
     // add strategy below !!!!!!!!
     // Demo_catch_YOLO *cDemoCatchYolo;
-    Joe_task *cJoe_task;
 };
