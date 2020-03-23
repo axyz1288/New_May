@@ -20,7 +20,7 @@ MotorPro::MotorPro(const unsigned char &MOTORID, const string &MotorModel)
 		MotorScale2Angle = 1.0 / Angle2MotorScale;
 		Scale2RPM = 0.00199234;
 
-		SetMotor_Velocity(5000);
+		SetMotor_Velocity(2000);
 		SetMotor_Torque(Max_Torque_Limit);
 		SetMotor_TorqueEnable(true);
 	}
@@ -57,7 +57,7 @@ MotorPro::MotorPro(const unsigned char &MOTORID, const string &MotorModel)
 		Scale2RPM = 0.00329218;
 
 		SetMotor_Velocity(2000);
-		SetMotor_Torque(Max_Torque_Limit);
+		SetMotor_Torque(250);
 		SetMotor_TorqueEnable(true);
 	}
 }
