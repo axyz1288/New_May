@@ -1,25 +1,4 @@
 #include "Robot.h"
-/* Robot */
-Robot *CRobot = Robot::getRobot();
-
-/* Speech */
-Speech *CSpeech = CRobot->CSpeech;
-
-/* Vision */
-Vision *CVision = CRobot->CVision;
-
-/* Body */
-Body *CBody = CRobot->CBody;
-// Head and Lifting
-HeadandLiftingPlatform *CHeadandLifting = CRobot->CBody->CHeadandLifting;
-// Arm
-SaleArmLeft *CLeftArm = CRobot->CBody->CSaleArmLeft;
-SaleArmRight *CRightArm = CRobot->CBody->CSaleArmRight;
-// MobilePlatform
-MobilePlatform *CMobilePlatform = CRobot->CBody->CMobilePlatform;
-Steering *CSteering = CRobot->CBody->CMobilePlatform->CSteering;
-Wheel *CWheel = CRobot->CBody->CMobilePlatform->CWheel;
-
 Robot *Robot::inst_ = nullptr;
 Robot *Robot::getRobot()
 {
@@ -46,5 +25,27 @@ Robot::~Robot()
 {
     delete CVision;
     delete CBody;
-    // delete CMaySpeech;
+    delete CSpeech;
 }
+
+/* Robot */
+Robot *CRobot = Robot::getRobot();
+
+/* Speech */
+Speech *CSpeech = CRobot->CSpeech;
+
+/* Vision */
+Vision *CVision = CRobot->CVision;
+
+/* Body */
+Body *CBody = CRobot->CBody;
+// Head and Lifting
+HeadandLiftingPlatform *CHeadandLifting = CRobot->CBody->CHeadandLifting;
+// Arm
+SaleArmLeft *CLeftArm = CRobot->CBody->CSaleArmLeft;
+SaleArmRight *CRightArm = CRobot->CBody->CSaleArmRight;
+// MobilePlatform
+MobilePlatform *CMobilePlatform = CRobot->CBody->CMobilePlatform;
+Steering *CSteering = CRobot->CBody->CMobilePlatform->CSteering;
+Wheel *CWheel = CRobot->CBody->CMobilePlatform->CWheel;
+int _i_dont_know_why_this_line_exec_first_fuckyou;
