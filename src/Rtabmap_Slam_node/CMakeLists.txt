@@ -11,7 +11,6 @@ set(RTABMAP_INCLUDE_DIRS /opt/ros/kinetic/include/rtabmap-0.19/rtabmap)
 include_directories(${ROS_INCLUDE_DIRS})
 include_directories(${RTABMAP_INCLUDE_DIRS})
 include_directories(${RTABMAP_ROS_INCLUDE_DIRS})
-include_directories(ENV${HOME}/New_May/src/Robot/Body)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
@@ -20,6 +19,6 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   std_msgs
 )
-add_library(Rtabmap_Slam_node Rtabmap_Slam_node.cpp)
+add_library(Rtabmap_Slam_node STATIC Rtabmap_Slam_node.cpp)
 
-target_link_libraries(Rtabmap_Slam_node ${catkin_LIBRARIES})
+target_link_libraries(Rtabmap_Slam_node ${catkin_LIBRARIES} Robot)

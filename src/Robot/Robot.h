@@ -18,6 +18,7 @@ private:
 	Robot();
 };
 
+/* Robot */
 extern Robot *CRobot;
 /* Speech */
 extern Speech *CSpeech;

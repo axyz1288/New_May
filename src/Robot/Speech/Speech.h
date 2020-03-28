@@ -1,16 +1,14 @@
 #include <thread>
 #include <chrono>
-#include "ros/ros.h"
-#include "std_msgs/String.h"
+#include <ros/ros.h>
+#include <std_msgs/String.h>
 #include <string>
-
-using namespace std;
 
 class Speech
 {
 public:
     Speech();
-    ~Speech();
+    ~Speech(){};
 
     std::string GetSubData(void);
     std::string GetPubData(void);
@@ -30,14 +28,14 @@ private:
 
     /* Talker */
     ros::Publisher pubber;
-    void Pub(string str);
+    void Pub(std::string str);
 
 private:
     std::string Pub_str;
     std::string Sub_str;
 
-    thread *PubThread;
-    thread *SubThread;
+    std::thread *PubThread;
+    std::thread *SubThread;
 
     bool is_deleted;
 

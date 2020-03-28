@@ -45,5 +45,5 @@ src/Form_Strategy.cpp
 qt5_wrap_ui(ui_headers ${ui})
 qt5_wrap_cpp(moc_headers ${headers})
 
-add_library(Gui ${ui_headers} ${src} ${moc_headers})
-target_link_libraries(Gui Qt5::Widgets Qt5::Core)
+add_library(Gui STATIC ${ui_headers} ${src} ${moc_headers})
+target_link_libraries(Gui Qt5::Widgets Qt5::Core Robot XBoxJoystick)

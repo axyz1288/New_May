@@ -22,6 +22,7 @@ public:
 	// Caculate Forward Kinematics
 	virtual cv::Mat *GetKinematics(void) = 0;
 	virtual cv::Mat *Calculate_ArmForwardKinematics(float J1, float J2, float J3, float J4, float J5, float J6) = 0;
+	virtual cv::Mat *Calculate_ArmForwardKinematics(float pre_angle, float J1, float J2, float J3, float J4, float J5, float J6) = 0;
 
 	// Caculate Inverse Kinematics
 	virtual float *Arm_InverseKinematics(cv::Mat *&T) = 0;

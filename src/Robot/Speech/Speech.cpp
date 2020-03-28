@@ -1,7 +1,4 @@
 #include "Speech.h"
-
-using namespace std;
-
 Speech::Speech()
 {
     // Initailize pubber once (ONLY once needed)
@@ -10,13 +7,10 @@ Speech::Speech()
     this->Pub_str = "default_pub";
     this->Sub_str = "default_sub";
 
-    this->PubThread = new thread(&Speech::PubToPython, this);
-    this->SubThread = new thread(&Speech::SubFromPython, this);
+    this->PubThread = new std::thread(&Speech::PubToPython, this);
+    this->SubThread = new std::thread(&Speech::SubFromPython, this);
 
     this->is_deleted = false;
-}
-Speech::~Speech()
-{
 }
 
 /* Public Function */
@@ -52,7 +46,7 @@ void Speech::Sub(void)
 }
 
 /* Talker */
-void Speech::Pub(string str)
+void Speech::Pub(std::string str)
 {
     std_msgs::String msg;
     msg.data = str;

@@ -2,10 +2,10 @@
 #include <ros/ros.h>
 #include <geometry_msgs/Point.h>
 #include <sensor_msgs/PointCloud2.h>
-#include <pcl_ros/point_cloud.h>
 #include <pcl_conversions/pcl_conversions.h>
-#include <pcl_ros/filters/voxel_grid.h>
-#include <pcl_ros/transforms.h>
+#include <pcl/point_cloud.h>
+#include <pcl/filters/voxel_grid.h>
+#include <pcl/common/transforms.h>
 #include <spec_msg/spec_points.h>
 #include <spec_msg/float32_1d.h>
 #include <spec_msg/float32_2d.h>
