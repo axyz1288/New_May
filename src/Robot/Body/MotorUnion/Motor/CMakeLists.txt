@@ -4,5 +4,5 @@ project(Motor)
 add_subdirectory(dynamixel)
 add_subdirectory(motor)
 
-add_library(Motor Motor.cpp MotorMx.cpp MotorPro.cpp MotorProPlus.cpp)
+add_library(Motor SHARED Motor.cpp MotorMx.cpp MotorPro.cpp MotorProPlus.cpp)
 target_link_libraries(Motor DynamixelSdk motor)

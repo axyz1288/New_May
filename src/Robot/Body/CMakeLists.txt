@@ -6,7 +6,7 @@ add_subdirectory(HeadandLiftingPlatform)
 add_subdirectory(MobilePlatform)
 add_subdirectory(MotorUnion)
 
-add_library(Body STATIC Body.cpp)
+add_library(Body SHARED Body.cpp)
 target_link_libraries(Body Arm HeadandLiftingPlatform MobilePlatform MotorUnion)
 
 # add_executable(Body_project main.cpp)

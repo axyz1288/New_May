@@ -19,6 +19,6 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   std_msgs
 )
-add_library(Rtabmap_Slam_node STATIC Rtabmap_Slam_node.cpp)
+add_library(Rtabmap_Slam_node SHARED Rtabmap_Slam_node.cpp)
 
 target_link_libraries(Rtabmap_Slam_node ${catkin_LIBRARIES} Robot)

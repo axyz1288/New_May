@@ -21,7 +21,7 @@ MotorMx::MotorMx(const unsigned char &MOTORID, const string &MotorModel)
 		Scale2RPM = 0.114;
 
 		SetMotor_Velocity(500);
-		SetMotor_Torque(200);
+		SetMotor_Torque(Max_Velocity_Limit);
 		SetMotor_TorqueEnable(true);
 	}
 }

@@ -16,7 +16,7 @@ include_directories(${catkin_INCLUDE_DIRS})
 include_directories(${PCL_INCLUDE_DIRS})
 include_directories(${CATKIN_DEVEL_PREFIX}/include)
 
-add_library(PclConverter pcl_converter.cpp)
+add_library(PclConverter SHARED pcl_converter.cpp)
 add_dependencies(PclConverter spec_msg_generate_messages_cpp ${catkin_EXPORTED_TARGETS})
 target_link_libraries(PclConverter ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 target_include_directories(PclConverter PUBLIC ${catkin_INCLUDE_DIRS} ${PCL_INCLUDE_DIRS} ${CATKIN_DEVEL_PREFIX}/include)

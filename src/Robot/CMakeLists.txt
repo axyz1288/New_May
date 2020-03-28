@@ -7,5 +7,5 @@ add_subdirectory(Body)
 add_subdirectory(Speech)
 add_subdirectory(Vision)
 
-add_library(Robot STATIC Robot.cpp)
+add_library(Robot SHARED Robot.cpp)
 target_link_libraries(Robot Body Speech Vision)

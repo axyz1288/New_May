@@ -43,6 +43,6 @@ src/Form_Strategy.cpp
 qt5_wrap_ui(ui_headers ${ui})
 qt5_wrap_cpp(moc_headers ${headers})
 
-add_library(Gui STATIC ${ui_headers} ${src} ${moc_headers})
+add_library(Gui SHARED ${ui_headers} ${src} ${moc_headers})
 target_link_libraries(Gui Qt5::Widgets Qt5::Core Robot XBoxJoystick)
 target_include_directories(Gui PUBLIC ${CMAKE_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/..)

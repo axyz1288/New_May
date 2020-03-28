@@ -3,5 +3,5 @@ project(Arm)
 
 add_subdirectory(BasicArm)
 
-add_library(Arm STATIC SaleArmLeft.cpp SaleArmRight.cpp)
+add_library(Arm SHARED SaleArmLeft.cpp SaleArmRight.cpp)
 target_link_libraries(Arm BasicArm)
