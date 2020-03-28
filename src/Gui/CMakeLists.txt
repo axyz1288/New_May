@@ -9,8 +9,6 @@ find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
 include_directories(${CMAKE_BINARY_DIR})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/..)
-include_directories(/opt/ros/kinetic/include)
-# include_directories(/opt/ros/kinetic/include/opencv-3.3.1-dev)
 
 set(ui
 ui/Form_Body.ui 
@@ -47,3 +45,4 @@ qt5_wrap_cpp(moc_headers ${headers})
 
 add_library(Gui STATIC ${ui_headers} ${src} ${moc_headers})
 target_link_libraries(Gui Qt5::Widgets Qt5::Core Robot XBoxJoystick)
+target_include_directories(Gui PUBLIC ${CMAKE_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/..)
