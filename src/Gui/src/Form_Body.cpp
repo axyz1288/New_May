@@ -59,17 +59,6 @@ Form_Body::~Form_Body()
 	thread_head->deleteLater();
 	thread_arm->deleteLater();
 	thread_mobile->deleteLater();
-	deleteLater();
-}
-
-void Form_Body::closeEvent(QCloseEvent *event)
-{
-	_is_deleted_thread_display = true;
-	if (thread_display != nullptr)
-	{
-		thread_display->join();
-		delete thread_display;
-	}
 }
 
 void Form_Body::on_LeftHand_btn_Stop_clicked()
@@ -98,24 +87,34 @@ void Form_Body::XBoxJoystick_state(int state)
 ////////////////////////////////////////////////////////////////////////////////
 ///  Display   /////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-void Form_Body::DisplayOn()
+void Form_Body::showEvent(QShowEvent *event)
 {
 	_is_deleted_thread_display = false;
 	thread_display = new std::thread(&Form_Body::Display, this);
+}
+
+void Form_Body::closeEvent(QCloseEvent *event)
+{
+	_is_deleted_thread_display = true;
+	if (thread_display != nullptr)
+	{
+		thread_display->join();
+		delete thread_display;
+	}
 }
 
 void Form_Body::Display()
 {
 	while (!_is_deleted_thread_display)
 	{
-		if (ui->Correction->currentIndex() == 0)
-			form_arm->Display();
-		else if (ui->Correction->currentIndex() == 1)
-			form_mobile->Display();
-		else if (ui->Correction->currentIndex() == 2)
-			form_head->Display();
-		else
-			;
+		// if (ui->Correction->currentIndex() == 0)
+		// 	form_arm->Display();
+		// else if (ui->Correction->currentIndex() == 1)
+		// 	form_mobile->Display();
+		// else if (ui->Correction->currentIndex() == 2)
+		// 	form_head->Display();
+		// else
+		// 	;
 		this_thread::sleep_for(chrono::milliseconds(waiting_delay_ms));
 	}
 }

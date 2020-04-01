@@ -15,9 +15,9 @@ class Form_Body : public QDialog
 public:
 	explicit Form_Body(QWidget *parent = nullptr);
 	virtual ~Form_Body();
-	void DisplayOn();
 
 protected:
+	void showEvent(QShowEvent *event);
 	void closeEvent(QCloseEvent *event);
 
 private slots:

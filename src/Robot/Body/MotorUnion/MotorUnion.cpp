@@ -307,8 +307,8 @@ void MotorUnion::SetMotor_TorqueEnable(const unsigned char &idx, const bool &ena
 ////////////////////////////////////////////////////////////////////////////////
 void MotorUnion::BGON()
 {
-	thread_BG = new thread(&MotorUnion::BGReadWrite, this);
 	_is_deleted_thread_BG = false;
+	thread_BG = new thread(&MotorUnion::BGReadWrite, this);
 }
 
 void MotorUnion::BGReadWrite()

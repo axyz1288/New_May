@@ -6,9 +6,8 @@ Form_ControlPanel::Form_ControlPanel(QWidget *parent) : QMainWindow(parent),
 	ui->setupUi(this);
 	form_body = new Form_Body(this);
 	form_network = new Form_Network();
-	form_strategy = new Form_Strategy();
+	form_strategy = new Form_Strategy(this);
 	// form_vision = new Form_Vision();
-
 }
 
 Form_ControlPanel::~Form_ControlPanel()
@@ -17,15 +16,18 @@ Form_ControlPanel::~Form_ControlPanel()
 	form_network->deleteLater();
 	form_strategy->deleteLater();
 	// form_vision->deleteLater();
-	deleteLater();
 }
 
 void Form_ControlPanel::closeEvent(QCloseEvent *event)
 {
-	// form_vision->close();
-    form_body->close();
-    form_strategy->close();
-    form_network->close();
+	// if (form_vision->isVisible())
+	// 	form_vision->close();
+	if (form_body->isVisible())
+		form_body->close();
+	if (form_strategy->isVisible())
+		form_strategy->close();
+	if (form_network->isVisible())
+		form_network->close();
 }
 
 void Form_ControlPanel::on_pB_Form_Vision_clicked()
@@ -39,14 +41,9 @@ void Form_ControlPanel::on_pB_Form_Vision_clicked()
 void Form_ControlPanel::on_pB_Form_Body_clicked()
 {
 	if (form_body->isHidden())
-	{
 		form_body->show();
-		form_body->DisplayOn();
-	}
 	else
-	{
 		form_body->hide();
-	}
 }
 
 void Form_ControlPanel::on_pB_Form_Strategy_clicked()

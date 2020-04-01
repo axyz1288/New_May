@@ -7,7 +7,6 @@ add_subdirectory(Gui)
 # add_subdirectory(Network)
 add_subdirectory(Robot)
 add_subdirectory(Strategy)
-add_subdirectory(Rtabmap_Slam_node)
 add_subdirectory(XBoxJoystick)
 
 add_executable(May_project main.cpp)
@@ -15,6 +14,5 @@ target_link_libraries(May_project
   Gui 
   Robot 
   Strategy 
-  Rtabmap_Slam_node 
   XBoxJoystick
 )
