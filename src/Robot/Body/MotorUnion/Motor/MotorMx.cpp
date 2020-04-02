@@ -47,7 +47,6 @@ void MotorMx::ReadPresentVelocity()
 			Motor_Present_Velocity = Max_Velocity_Limit - data;
 		else
 			Motor_Present_Velocity = (short)data;
-		Motor_Present_Velocity *= Scale2RPM;
 	}
 }
 

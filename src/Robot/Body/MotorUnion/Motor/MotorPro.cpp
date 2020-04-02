@@ -75,7 +75,7 @@ void MotorPro::ReadPresentVelocity()
 	uint32_t data = 0;
 	dxl_comm_result = packetHandler->read4ByteTxRx(portHandler, Motor_ID, ADDR_PRESENT_VELOCITY, &data, &dxl_error);
 	if (dxl_comm_result == COMM_SUCCESS)
-		Motor_Present_Velocity = (int)data * Scale2RPM;
+		Motor_Present_Velocity = (int)data;
 }
 
 void MotorPro::ReadPresentTorque()

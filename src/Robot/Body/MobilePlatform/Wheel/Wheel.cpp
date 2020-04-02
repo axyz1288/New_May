@@ -73,10 +73,10 @@ void Wheel::SoftStart(const int &velocity_LF, const int &velocity_RF, const int 
     // once set velocity, turn on torque enable
     SwitchTorqueEnable(velocity_LF, velocity_RF, velocity_LB, velocity_RB);
 
-    int present_velocity_LF = GetMotor_PresentVelocity(wheel_LF) / GetMotor_Scale2RPM(wheel_LF); //RPM to Scale
-    int present_velocity_RF = GetMotor_PresentVelocity(wheel_RF) / GetMotor_Scale2RPM(wheel_RF);
-    int present_velocity_LB = GetMotor_PresentVelocity(wheel_LB) / GetMotor_Scale2RPM(wheel_LB);
-    int present_velocity_RB = GetMotor_PresentVelocity(wheel_RB) / GetMotor_Scale2RPM(wheel_RB);
+    int present_velocity_LF = GetMotor_PresentVelocity(wheel_LF);
+    int present_velocity_RF = GetMotor_PresentVelocity(wheel_RF);
+    int present_velocity_LB = GetMotor_PresentVelocity(wheel_LB);
+    int present_velocity_RB = GetMotor_PresentVelocity(wheel_RB);
     const char compare_sign = velocity_LF * velocity_RF < 0 ? -1 : 1;
     const int average_present_velocity = (compare_sign * present_velocity_LF + present_velocity_RF + compare_sign * present_velocity_LB + present_velocity_RB) / 4;
 
