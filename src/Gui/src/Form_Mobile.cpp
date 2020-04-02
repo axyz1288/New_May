@@ -102,24 +102,24 @@ void Form_Mobile::Display()
 	isOK(CWheel->GetMotor_Connected(2), ui->Wheel_label_ID_3);
 	isOK(CWheel->GetMotor_Connected(3), ui->Wheel_label_ID_4);
 	// Angle
-	ui->Wheel_lineEdit_PresentAngle->setText(QString::number((int)CWheel->GetMotor_PresentAngle(0)));
-	ui->Wheel_lineEdit_PresentAngle_2->setText(QString::number((int)CWheel->GetMotor_PresentAngle(1)));
-	ui->Wheel_lineEdit_PresentAngle_3->setText(QString::number((int)CWheel->GetMotor_PresentAngle(2)));
-	ui->Wheel_lineEdit_PresentAngle_4->setText(QString::number((int)CWheel->GetMotor_PresentAngle(3)));
+	ui->Wheel_label_PresentAngle->setText(QString::number((int)CWheel->GetMotor_PresentAngle(0)));
+	ui->Wheel_label_PresentAngle_2->setText(QString::number((int)CWheel->GetMotor_PresentAngle(1)));
+	ui->Wheel_label_PresentAngle_3->setText(QString::number((int)CWheel->GetMotor_PresentAngle(2)));
+	ui->Wheel_label_PresentAngle_4->setText(QString::number((int)CWheel->GetMotor_PresentAngle(3)));
 	//Velocity
-	ui->Wheel_lineEdit_PresentVelocity->setText(QString::number((int)CWheel->GetMotor_PresentVelocity(0)));
-	ui->Wheel_lineEdit_PresentVelocity_2->setText(QString::number((int)CWheel->GetMotor_PresentVelocity(1)));
-	ui->Wheel_lineEdit_PresentVelocity_3->setText(QString::number((int)CWheel->GetMotor_PresentVelocity(2)));
-	ui->Wheel_lineEdit_PresentVelocity_4->setText(QString::number((int)CWheel->GetMotor_PresentVelocity(3)));
+	ui->Wheel_label_PresentVelocity->setText(QString::number((int)CWheel->GetMotor_PresentVelocity(0)));
+	ui->Wheel_label_PresentVelocity_2->setText(QString::number((int)CWheel->GetMotor_PresentVelocity(1)));
+	ui->Wheel_label_PresentVelocity_3->setText(QString::number((int)CWheel->GetMotor_PresentVelocity(2)));
+	ui->Wheel_label_PresentVelocity_4->setText(QString::number((int)CWheel->GetMotor_PresentVelocity(3)));
 	// Torque
-	ui->Wheel_lineEdit_PresentTorque->setText(QString::number((int)CWheel->GetMotor_PresentTorque(0)));
-	ui->Wheel_lineEdit_PresentTorque_2->setText(QString::number((int)CWheel->GetMotor_PresentTorque(1)));
-	ui->Wheel_lineEdit_PresentTorque_3->setText(QString::number((int)CWheel->GetMotor_PresentTorque(2)));
-	ui->Wheel_lineEdit_PresentTorque_4->setText(QString::number((int)CWheel->GetMotor_PresentTorque(3)));
-	isOK((abs(CWheel->GetMotor_PresentTorque(0)) < torque_threshold) ? true : false, ui->Wheel_lineEdit_PresentTorque);
-	isOK((abs(CWheel->GetMotor_PresentTorque(1)) < torque_threshold) ? true : false, ui->Wheel_lineEdit_PresentTorque_2);
-	isOK((abs(CWheel->GetMotor_PresentTorque(2)) < torque_threshold) ? true : false, ui->Wheel_lineEdit_PresentTorque_3);
-	isOK((abs(CWheel->GetMotor_PresentTorque(3)) < torque_threshold) ? true : false, ui->Wheel_lineEdit_PresentTorque_4);
+	ui->Wheel_label_PresentTorque->setText(QString::number((int)CWheel->GetMotor_PresentTorque(0)));
+	ui->Wheel_label_PresentTorque_2->setText(QString::number((int)CWheel->GetMotor_PresentTorque(1)));
+	ui->Wheel_label_PresentTorque_3->setText(QString::number((int)CWheel->GetMotor_PresentTorque(2)));
+	ui->Wheel_label_PresentTorque_4->setText(QString::number((int)CWheel->GetMotor_PresentTorque(3)));
+	isOK((abs(CWheel->GetMotor_PresentTorque(0)) < torque_threshold) ? true : false, ui->Wheel_label_PresentTorque);
+	isOK((abs(CWheel->GetMotor_PresentTorque(1)) < torque_threshold) ? true : false, ui->Wheel_label_PresentTorque_2);
+	isOK((abs(CWheel->GetMotor_PresentTorque(2)) < torque_threshold) ? true : false, ui->Wheel_label_PresentTorque_3);
+	isOK((abs(CWheel->GetMotor_PresentTorque(3)) < torque_threshold) ? true : false, ui->Wheel_label_PresentTorque_4);
 
 	/* Steering */
 	// ID
@@ -132,35 +132,27 @@ void Form_Mobile::Display()
 	isOK(CSteering->GetMotor_Connected(2), ui->Steering_label_ID_3);
 	isOK(CSteering->GetMotor_Connected(3), ui->Steering_label_ID_4);
 	// Angle
-	ui->Steering_lineEdit_PresentAngle->setText(QString::number((int)CSteering->GetMotor_PresentAngle(0)));
-	ui->Steering_lineEdit_PresentAngle_2->setText(QString::number((int)CSteering->GetMotor_PresentAngle(1)));
-	ui->Steering_lineEdit_PresentAngle_3->setText(QString::number((int)CSteering->GetMotor_PresentAngle(2)));
-	ui->Steering_lineEdit_PresentAngle_4->setText(QString::number((int)CSteering->GetMotor_PresentAngle(3)));
+	ui->Steering_label_PresentAngle->setText(QString::number((int)CSteering->GetMotor_PresentAngle(0)));
+	ui->Steering_label_PresentAngle_2->setText(QString::number((int)CSteering->GetMotor_PresentAngle(1)));
+	ui->Steering_label_PresentAngle_3->setText(QString::number((int)CSteering->GetMotor_PresentAngle(2)));
+	ui->Steering_label_PresentAngle_4->setText(QString::number((int)CSteering->GetMotor_PresentAngle(3)));
 	// Velocity
-	ui->Steering_lineEdit_PresentVelocity->setText(QString::number((int)CSteering->GetMotor_PresentVelocity(0)));
-	ui->Steering_lineEdit_PresentVelocity_2->setText(QString::number((int)CSteering->GetMotor_PresentVelocity(1)));
-	ui->Steering_lineEdit_PresentVelocity_3->setText(QString::number((int)CSteering->GetMotor_PresentVelocity(2)));
-	ui->Steering_lineEdit_PresentVelocity_4->setText(QString::number((int)CSteering->GetMotor_PresentVelocity(3)));
+	ui->Steering_label_PresentVelocity->setText(QString::number((int)CSteering->GetMotor_PresentVelocity(0)));
+	ui->Steering_label_PresentVelocity_2->setText(QString::number((int)CSteering->GetMotor_PresentVelocity(1)));
+	ui->Steering_label_PresentVelocity_3->setText(QString::number((int)CSteering->GetMotor_PresentVelocity(2)));
+	ui->Steering_label_PresentVelocity_4->setText(QString::number((int)CSteering->GetMotor_PresentVelocity(3)));
 	// Torque
-	ui->Steering_lineEdit_PresentTorque->setText(QString::number((int)CSteering->GetMotor_PresentTorque(0)));
-	ui->Steering_lineEdit_PresentTorque_2->setText(QString::number((int)CSteering->GetMotor_PresentTorque(1)));
-	ui->Steering_lineEdit_PresentTorque_3->setText(QString::number((int)CSteering->GetMotor_PresentTorque(2)));
-	ui->Steering_lineEdit_PresentTorque_4->setText(QString::number((int)CSteering->GetMotor_PresentTorque(3)));
-	isOK((abs(CSteering->GetMotor_PresentTorque(0)) < torque_threshold) ? true : false, ui->Steering_lineEdit_PresentTorque);
-	isOK((abs(CSteering->GetMotor_PresentTorque(1)) < torque_threshold) ? true : false, ui->Steering_lineEdit_PresentTorque_2);
-	isOK((abs(CSteering->GetMotor_PresentTorque(2)) < torque_threshold) ? true : false, ui->Steering_lineEdit_PresentTorque_3);
-	isOK((abs(CSteering->GetMotor_PresentTorque(3)) < torque_threshold) ? true : false, ui->Steering_lineEdit_PresentTorque_4);
+	ui->Steering_label_PresentTorque->setText(QString::number((int)CSteering->GetMotor_PresentTorque(0)));
+	ui->Steering_label_PresentTorque_2->setText(QString::number((int)CSteering->GetMotor_PresentTorque(1)));
+	ui->Steering_label_PresentTorque_3->setText(QString::number((int)CSteering->GetMotor_PresentTorque(2)));
+	ui->Steering_label_PresentTorque_4->setText(QString::number((int)CSteering->GetMotor_PresentTorque(3)));
+	isOK((abs(CSteering->GetMotor_PresentTorque(0)) < torque_threshold) ? true : false, ui->Steering_label_PresentTorque);
+	isOK((abs(CSteering->GetMotor_PresentTorque(1)) < torque_threshold) ? true : false, ui->Steering_label_PresentTorque_2);
+	isOK((abs(CSteering->GetMotor_PresentTorque(2)) < torque_threshold) ? true : false, ui->Steering_label_PresentTorque_3);
+	isOK((abs(CSteering->GetMotor_PresentTorque(3)) < torque_threshold) ? true : false, ui->Steering_label_PresentTorque_4);
 }
 
 void Form_Mobile::isOK(bool checked_thing, QLabel *label)
-{
-	if (checked_thing == true)
-		Green(label);
-	else
-		Red(label);
-}
-
-void Form_Mobile::isOK(bool checked_thing, QLineEdit *label)
 {
 	if (checked_thing == true)
 		Green(label);
@@ -173,17 +165,7 @@ void Form_Mobile::Red(QLabel *label)
 	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLabel { background-color : rgb(255,0,0)}"));
 }
 
-void Form_Mobile::Red(QLineEdit *label)
-{
-	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLineEdit { background-color : rgb(255,0,0)}"));
-}
-
 void Form_Mobile::Green(QLabel *label)
 {
 	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLabel { background-color : rgb(0,255,0)}"));
-}
-
-void Form_Mobile::Green(QLineEdit *label)
-{
-	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLineEdit { background-color : rgb(0,255,0)}"));
 }

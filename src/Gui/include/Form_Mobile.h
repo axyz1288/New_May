@@ -31,11 +31,8 @@ public slots:
 private:
     Ui::Form_Body *ui;
     void isOK(bool checked_thing, QLabel *label);
-    void isOK(bool checked_thing, QLineEdit *label);
     void Red(QLabel *label);
-    void Red(QLineEdit *label);
     void Green(QLabel *label);
-    void Green(QLineEdit *label);
 
     const int torque_threshold;
 };

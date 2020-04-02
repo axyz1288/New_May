@@ -84,40 +84,40 @@ void Form_Arm::Display()
 	isOK(CLeftArm->GetMotor_Connected(6), ui->Leftarm_label_ID_7);
 	isOK(CLeftArm->GetMotor_Connected(7), ui->Leftarm_label_ID_8);
 	// Angle
-	ui->Leftarm_linEdit_presentangle->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(0)));
-	ui->Leftarm_linEdit_presentangle_2->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(1)));
-	ui->Leftarm_linEdit_presentangle_3->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(2)));
-	ui->Leftarm_linEdit_presentangle_4->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(3)));
-	ui->Leftarm_linEdit_presentangle_5->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(4)));
-	ui->Leftarm_linEdit_presentangle_6->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(5)));
-	ui->Leftarm_linEdit_presentangle_7->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(6)));
-	ui->Leftarm_linEdit_presentangle_8->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(7)));
+	ui->Leftarm_label_PresentAngle->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(0)));
+	ui->Leftarm_label_PresentAngle_2->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(1)));
+	ui->Leftarm_label_PresentAngle_3->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(2)));
+	ui->Leftarm_label_PresentAngle_4->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(3)));
+	ui->Leftarm_label_PresentAngle_5->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(4)));
+	ui->Leftarm_label_PresentAngle_6->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(5)));
+	ui->Leftarm_label_PresentAngle_7->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(6)));
+	ui->Leftarm_label_PresentAngle_8->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(7)));
 	//Velocity
-	ui->Leftarm_linEdit_presentvelocity->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(0)));
-	ui->Leftarm_linEdit_presentvelocity_2->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(1)));
-	ui->Leftarm_linEdit_presentvelocity_3->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(2)));
-	ui->Leftarm_linEdit_presentvelocity_4->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(3)));
-	ui->Leftarm_linEdit_presentvelocity_5->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(4)));
-	ui->Leftarm_linEdit_presentvelocity_6->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(5)));
-	ui->Leftarm_linEdit_presentvelocity_7->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(6)));
-	ui->Leftarm_linEdit_presentvelocity_8->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(7)));
+	ui->Leftarm_label_PresentVelocity->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(0)));
+	ui->Leftarm_label_PresentVelocity_2->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(1)));
+	ui->Leftarm_label_PresentVelocity_3->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(2)));
+	ui->Leftarm_label_PresentVelocity_4->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(3)));
+	ui->Leftarm_label_PresentVelocity_5->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(4)));
+	ui->Leftarm_label_PresentVelocity_6->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(5)));
+	ui->Leftarm_label_PresentVelocity_7->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(6)));
+	ui->Leftarm_label_PresentVelocity_8->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(7)));
 	// Torque
-	ui->Leftarm_linEdit_presenttorque->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(0)));
-	ui->Leftarm_linEdit_presenttorque_2->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(1)));
-	ui->Leftarm_linEdit_presenttorque_3->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(2)));
-	ui->Leftarm_linEdit_presenttorque_4->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(3)));
-	ui->Leftarm_linEdit_presenttorque_5->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(4)));
-	ui->Leftarm_linEdit_presenttorque_6->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(5)));
-	ui->Leftarm_linEdit_presenttorque_7->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(6)));
-	ui->Leftarm_linEdit_presenttorque_8->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(7)));
-	isOK((abs(CLeftArm->GetMotor_PresentTorque(0)) < torque_threshold) ? true : false, ui->Leftarm_linEdit_presenttorque);
-	isOK((abs(CLeftArm->GetMotor_PresentTorque(1)) < torque_threshold) ? true : false, ui->Leftarm_linEdit_presenttorque_2);
-	isOK((abs(CLeftArm->GetMotor_PresentTorque(2)) < torque_threshold) ? true : false, ui->Leftarm_linEdit_presenttorque_3);
-	isOK((abs(CLeftArm->GetMotor_PresentTorque(3)) < torque_threshold) ? true : false, ui->Leftarm_linEdit_presenttorque_4);
-	isOK((abs(CLeftArm->GetMotor_PresentTorque(4)) < torque_threshold) ? true : false, ui->Leftarm_linEdit_presenttorque_5);
-	isOK((abs(CLeftArm->GetMotor_PresentTorque(5)) < torque_threshold) ? true : false, ui->Leftarm_linEdit_presenttorque_6);
-	isOK((abs(CLeftArm->GetMotor_PresentTorque(6)) < torque_threshold) ? true : false, ui->Leftarm_linEdit_presenttorque_7);
-	isOK((abs(CLeftArm->GetMotor_PresentTorque(7)) < torque_threshold) ? true : false, ui->Leftarm_linEdit_presenttorque_8);
+	ui->Leftarm_label_PresentTorque->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(0)));
+	ui->Leftarm_label_PresentTorque_2->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(1)));
+	ui->Leftarm_label_PresentTorque_3->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(2)));
+	ui->Leftarm_label_PresentTorque_4->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(3)));
+	ui->Leftarm_label_PresentTorque_5->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(4)));
+	ui->Leftarm_label_PresentTorque_6->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(5)));
+	ui->Leftarm_label_PresentTorque_7->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(6)));
+	ui->Leftarm_label_PresentTorque_8->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(7)));
+	isOK((abs(CLeftArm->GetMotor_PresentTorque(0)) < torque_threshold) ? true : false, ui->Leftarm_label_PresentTorque);
+	isOK((abs(CLeftArm->GetMotor_PresentTorque(1)) < torque_threshold) ? true : false, ui->Leftarm_label_PresentTorque_2);
+	isOK((abs(CLeftArm->GetMotor_PresentTorque(2)) < torque_threshold) ? true : false, ui->Leftarm_label_PresentTorque_3);
+	isOK((abs(CLeftArm->GetMotor_PresentTorque(3)) < torque_threshold) ? true : false, ui->Leftarm_label_PresentTorque_4);
+	isOK((abs(CLeftArm->GetMotor_PresentTorque(4)) < torque_threshold) ? true : false, ui->Leftarm_label_PresentTorque_5);
+	isOK((abs(CLeftArm->GetMotor_PresentTorque(5)) < torque_threshold) ? true : false, ui->Leftarm_label_PresentTorque_6);
+	isOK((abs(CLeftArm->GetMotor_PresentTorque(6)) < torque_threshold) ? true : false, ui->Leftarm_label_PresentTorque_7);
+	isOK((abs(CLeftArm->GetMotor_PresentTorque(7)) < torque_threshold) ? true : false, ui->Leftarm_label_PresentTorque_8);
 
 	/* RightArm */
 	// ID
@@ -138,51 +138,43 @@ void Form_Arm::Display()
 	isOK(CRightArm->GetMotor_Connected(6), ui->Rightarm_label_ID_7);
 	isOK(CRightArm->GetMotor_Connected(7), ui->Rightarm_label_ID_8);
 	// Angle
-	ui->Rightarm_linEdit_presentangle->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(0)));
-	ui->Rightarm_linEdit_presentangle_2->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(1)));
-	ui->Rightarm_linEdit_presentangle_3->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(2)));
-	ui->Rightarm_linEdit_presentangle_4->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(3)));
-	ui->Rightarm_linEdit_presentangle_5->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(4)));
-	ui->Rightarm_linEdit_presentangle_6->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(5)));
-	ui->Rightarm_linEdit_presentangle_7->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(6)));
-	ui->Rightarm_linEdit_presentangle_8->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(7)));
+	ui->Rightarm_label_PresentAngle->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(0)));
+	ui->Rightarm_label_PresentAngle_2->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(1)));
+	ui->Rightarm_label_PresentAngle_3->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(2)));
+	ui->Rightarm_label_PresentAngle_4->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(3)));
+	ui->Rightarm_label_PresentAngle_5->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(4)));
+	ui->Rightarm_label_PresentAngle_6->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(5)));
+	ui->Rightarm_label_PresentAngle_7->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(6)));
+	ui->Rightarm_label_PresentAngle_8->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(7)));
 	// Velocity
-	ui->Rightarm_linEdit_presentvelocity->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(0)));
-	ui->Rightarm_linEdit_presentvelocity_2->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(1)));
-	ui->Rightarm_linEdit_presentvelocity_3->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(2)));
-	ui->Rightarm_linEdit_presentvelocity_4->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(3)));
-	ui->Rightarm_linEdit_presentvelocity_5->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(4)));
-	ui->Rightarm_linEdit_presentvelocity_6->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(5)));
-	ui->Rightarm_linEdit_presentvelocity_7->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(6)));
-	ui->Rightarm_linEdit_presentvelocity_8->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(7)));
+	ui->Rightarm_label_PresentVelocity->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(0)));
+	ui->Rightarm_label_PresentVelocity_2->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(1)));
+	ui->Rightarm_label_PresentVelocity_3->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(2)));
+	ui->Rightarm_label_PresentVelocity_4->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(3)));
+	ui->Rightarm_label_PresentVelocity_5->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(4)));
+	ui->Rightarm_label_PresentVelocity_6->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(5)));
+	ui->Rightarm_label_PresentVelocity_7->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(6)));
+	ui->Rightarm_label_PresentVelocity_8->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(7)));
 	// Torque
-	ui->Rightarm_linEdit_presenttorque->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(0)));
-	ui->Rightarm_linEdit_presenttorque_2->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(1)));
-	ui->Rightarm_linEdit_presenttorque_3->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(2)));
-	ui->Rightarm_linEdit_presenttorque_4->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(3)));
-	ui->Rightarm_linEdit_presenttorque_5->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(4)));
-	ui->Rightarm_linEdit_presenttorque_6->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(5)));
-	ui->Rightarm_linEdit_presenttorque_7->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(6)));
-	ui->Rightarm_linEdit_presenttorque_8->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(7)));
-	isOK((abs(CRightArm->GetMotor_PresentTorque(0)) < torque_threshold) ? true : false, ui->Rightarm_linEdit_presenttorque);
-	isOK((abs(CRightArm->GetMotor_PresentTorque(1)) < torque_threshold) ? true : false, ui->Rightarm_linEdit_presenttorque_2);
-	isOK((abs(CRightArm->GetMotor_PresentTorque(2)) < torque_threshold) ? true : false, ui->Rightarm_linEdit_presenttorque_3);
-	isOK((abs(CRightArm->GetMotor_PresentTorque(3)) < torque_threshold) ? true : false, ui->Rightarm_linEdit_presenttorque_4);
-	isOK((abs(CRightArm->GetMotor_PresentTorque(4)) < torque_threshold) ? true : false, ui->Rightarm_linEdit_presenttorque_5);
-	isOK((abs(CRightArm->GetMotor_PresentTorque(5)) < torque_threshold) ? true : false, ui->Rightarm_linEdit_presenttorque_6);
-	isOK((abs(CRightArm->GetMotor_PresentTorque(6)) < torque_threshold) ? true : false, ui->Rightarm_linEdit_presenttorque_7);
-	isOK((abs(CRightArm->GetMotor_PresentTorque(7)) < torque_threshold) ? true : false, ui->Rightarm_linEdit_presenttorque_8);
+	ui->Rightarm_label_PresentTorque->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(0)));
+	ui->Rightarm_label_PresentTorque_2->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(1)));
+	ui->Rightarm_label_PresentTorque_3->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(2)));
+	ui->Rightarm_label_PresentTorque_4->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(3)));
+	ui->Rightarm_label_PresentTorque_5->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(4)));
+	ui->Rightarm_label_PresentTorque_6->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(5)));
+	ui->Rightarm_label_PresentTorque_7->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(6)));
+	ui->Rightarm_label_PresentTorque_8->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(7)));
+	isOK((abs(CRightArm->GetMotor_PresentTorque(0)) < torque_threshold) ? true : false, ui->Rightarm_label_PresentTorque);
+	isOK((abs(CRightArm->GetMotor_PresentTorque(1)) < torque_threshold) ? true : false, ui->Rightarm_label_PresentTorque_2);
+	isOK((abs(CRightArm->GetMotor_PresentTorque(2)) < torque_threshold) ? true : false, ui->Rightarm_label_PresentTorque_3);
+	isOK((abs(CRightArm->GetMotor_PresentTorque(3)) < torque_threshold) ? true : false, ui->Rightarm_label_PresentTorque_4);
+	isOK((abs(CRightArm->GetMotor_PresentTorque(4)) < torque_threshold) ? true : false, ui->Rightarm_label_PresentTorque_5);
+	isOK((abs(CRightArm->GetMotor_PresentTorque(5)) < torque_threshold) ? true : false, ui->Rightarm_label_PresentTorque_6);
+	isOK((abs(CRightArm->GetMotor_PresentTorque(6)) < torque_threshold) ? true : false, ui->Rightarm_label_PresentTorque_7);
+	isOK((abs(CRightArm->GetMotor_PresentTorque(7)) < torque_threshold) ? true : false, ui->Rightarm_label_PresentTorque_8);
 }
 
 void Form_Arm::isOK(bool checked_thing, QLabel *label)
-{
-	if (checked_thing == true)
-		Green(label);
-	else
-		Red(label);
-}
-
-void Form_Arm::isOK(bool checked_thing, QLineEdit *label)
 {
 	if (checked_thing == true)
 		Green(label);
@@ -195,17 +187,7 @@ void Form_Arm::Red(QLabel *label)
 	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLabel { background-color : rgb(255,0,0)}"));
 }
 
-void Form_Arm::Red(QLineEdit *label)
-{
-	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLineEdit { background-color : rgb(255,0,0)}"));
-}
-
 void Form_Arm::Green(QLabel *label)
 {
 	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLabel { background-color : rgb(0,255,0)}"));
-}
-
-void Form_Arm::Green(QLineEdit *label)
-{
-	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLineEdit { background-color : rgb(0,255,0)}"));
 }

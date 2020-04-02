@@ -1,20 +1,20 @@
 #include "../include/Form_Head.h"
 void Form_Head::HeadReset()
 {
-	ui->HeadHorizontal_lineEdit_value->setText(QString::number(0));
-	ui->HeadVertical_lineEdit_value->setText(QString::number(0));
+	ui->HeadHorizontal_label_value->setText(QString::number(0));
+	ui->HeadVertical_label_value->setText(QString::number(0));
 	CHeadandLifting->ResetAllMotorAngle();
 }
 
 void Form_Head::HeadVerticalMove()
 {
-	ui->HeadVertical_lineEdit_value->setText(QString::number(ui->HeadVertical_Slider->value()));
+	ui->HeadVertical_label_value->setText(QString::number(ui->HeadVertical_Slider->value()));
     CHeadandLifting->HeadMotorCommand(0, ui->HeadVertical_Slider->value());
 }
 
 void Form_Head::HeadHorizontalMove()
 {
-	ui->HeadHorizontal_lineEdit_value->setText(QString::number(ui->HeadHorizontal_Slider->value()));
+	ui->HeadHorizontal_label_value->setText(QString::number(ui->HeadHorizontal_Slider->value()));
     CHeadandLifting->HeadMotorCommand(1, ui->HeadHorizontal_Slider->value());
 }
 
@@ -31,10 +31,10 @@ void Form_Head::Display()
 	// isOK(CHeadandLifting->GetMotor_Connected(2), ui->Head_label_ID_3);
 	// isOK(CHeadandLifting->GetMotor_Connected(3), ui->Head_label_ID_4);
 	// Angle
-	ui->Head_lineEdit_presentangle->setText(QString::number((int)CHeadandLifting->GetMotor_PresentAngle(0)));
-	ui->Head_lineEdit_presentangle_2->setText(QString::number((int)CHeadandLifting->GetMotor_PresentAngle(1)));
-	// ui->Head_lineEdit_presentangle_3->setText(QString::number((int)CHeadandLifting->GetMotor_PresentAngle(2)));
-	// ui->Head_lineEdit_presentangle_4->setText(QString::number((int)CHeadandLifting->GetMotor_PresentAngle(3)));
+	ui->Head_label_PresentAngle->setText(QString::number((int)CHeadandLifting->GetMotor_PresentAngle(0)));
+	ui->Head_label_PresentAngle_2->setText(QString::number((int)CHeadandLifting->GetMotor_PresentAngle(1)));
+	// ui->Head_label_PresentAngle_3->setText(QString::number((int)CHeadandLifting->GetMotor_PresentAngle(2)));
+	// ui->Head_label_PresentAngle_4->setText(QString::number((int)CHeadandLifting->GetMotor_PresentAngle(3)));
 }
 
 void Form_Head::isOK(bool checked_thing, QLabel *label)
