@@ -107,10 +107,10 @@ void Form_Mobile::Display()
 	ui->Wheel_label_PresentAngle_3->setText(QString::number((int)CWheel->GetMotor_PresentAngle(2)));
 	ui->Wheel_label_PresentAngle_4->setText(QString::number((int)CWheel->GetMotor_PresentAngle(3)));
 	//Velocity
-	ui->Wheel_label_PresentVelocity->setText(QString::number((int)CWheel->GetMotor_PresentVelocity(0)));
-	ui->Wheel_label_PresentVelocity_2->setText(QString::number((int)CWheel->GetMotor_PresentVelocity(1)));
-	ui->Wheel_label_PresentVelocity_3->setText(QString::number((int)CWheel->GetMotor_PresentVelocity(2)));
-	ui->Wheel_label_PresentVelocity_4->setText(QString::number((int)CWheel->GetMotor_PresentVelocity(3)));
+	ui->Wheel_label_PresentVelocity->setText(QString::number((int)CWheel->GetMotor_Velocity(0)));
+	ui->Wheel_label_PresentVelocity_2->setText(QString::number((int)CWheel->GetMotor_Velocity(1)));
+	ui->Wheel_label_PresentVelocity_3->setText(QString::number((int)CWheel->GetMotor_Velocity(2)));
+	ui->Wheel_label_PresentVelocity_4->setText(QString::number((int)CWheel->GetMotor_Velocity(3)));
 	// Torque
 	ui->Wheel_label_PresentTorque->setText(QString::number((int)CWheel->GetMotor_PresentTorque(0)));
 	ui->Wheel_label_PresentTorque_2->setText(QString::number((int)CWheel->GetMotor_PresentTorque(1)));
@@ -137,10 +137,10 @@ void Form_Mobile::Display()
 	ui->Steering_label_PresentAngle_3->setText(QString::number((int)CSteering->GetMotor_PresentAngle(2)));
 	ui->Steering_label_PresentAngle_4->setText(QString::number((int)CSteering->GetMotor_PresentAngle(3)));
 	// Velocity
-	ui->Steering_label_PresentVelocity->setText(QString::number((int)CSteering->GetMotor_PresentVelocity(0)));
-	ui->Steering_label_PresentVelocity_2->setText(QString::number((int)CSteering->GetMotor_PresentVelocity(1)));
-	ui->Steering_label_PresentVelocity_3->setText(QString::number((int)CSteering->GetMotor_PresentVelocity(2)));
-	ui->Steering_label_PresentVelocity_4->setText(QString::number((int)CSteering->GetMotor_PresentVelocity(3)));
+	ui->Steering_label_PresentVelocity->setText(QString::number((int)CSteering->GetMotor_Velocity(0)));
+	ui->Steering_label_PresentVelocity_2->setText(QString::number((int)CSteering->GetMotor_Velocity(1)));
+	ui->Steering_label_PresentVelocity_3->setText(QString::number((int)CSteering->GetMotor_Velocity(2)));
+	ui->Steering_label_PresentVelocity_4->setText(QString::number((int)CSteering->GetMotor_Velocity(3)));
 	// Torque
 	ui->Steering_label_PresentTorque->setText(QString::number((int)CSteering->GetMotor_PresentTorque(0)));
 	ui->Steering_label_PresentTorque_2->setText(QString::number((int)CSteering->GetMotor_PresentTorque(1)));
@@ -162,10 +162,10 @@ void Form_Mobile::isOK(bool checked_thing, QLabel *label)
 
 void Form_Mobile::Red(QLabel *label)
 {
-	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLabel { background-color : rgb(255,0,0)}"));
+	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLabel { background-color: rgb(255, 60, 63)}"));
 }
 
 void Form_Mobile::Green(QLabel *label)
 {
-	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLabel { background-color : rgb(0,255,0)}"));
+	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLabel { background-color: rgb(170, 255, 127)}"));
 }

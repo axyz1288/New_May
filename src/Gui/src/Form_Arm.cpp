@@ -93,14 +93,14 @@ void Form_Arm::Display()
 	ui->Leftarm_label_PresentAngle_7->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(6)));
 	ui->Leftarm_label_PresentAngle_8->setText(QString::number((int)CLeftArm->GetMotor_PresentAngle(7)));
 	//Velocity
-	ui->Leftarm_label_PresentVelocity->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(0)));
-	ui->Leftarm_label_PresentVelocity_2->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(1)));
-	ui->Leftarm_label_PresentVelocity_3->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(2)));
-	ui->Leftarm_label_PresentVelocity_4->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(3)));
-	ui->Leftarm_label_PresentVelocity_5->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(4)));
-	ui->Leftarm_label_PresentVelocity_6->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(5)));
-	ui->Leftarm_label_PresentVelocity_7->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(6)));
-	ui->Leftarm_label_PresentVelocity_8->setText(QString::number((int)CLeftArm->GetMotor_PresentVelocity(7)));
+	ui->Leftarm_label_PresentVelocity->setText(QString::number((int)CLeftArm->GetMotor_Velocity(0)));
+	ui->Leftarm_label_PresentVelocity_2->setText(QString::number((int)CLeftArm->GetMotor_Velocity(1)));
+	ui->Leftarm_label_PresentVelocity_3->setText(QString::number((int)CLeftArm->GetMotor_Velocity(2)));
+	ui->Leftarm_label_PresentVelocity_4->setText(QString::number((int)CLeftArm->GetMotor_Velocity(3)));
+	ui->Leftarm_label_PresentVelocity_5->setText(QString::number((int)CLeftArm->GetMotor_Velocity(4)));
+	ui->Leftarm_label_PresentVelocity_6->setText(QString::number((int)CLeftArm->GetMotor_Velocity(5)));
+	ui->Leftarm_label_PresentVelocity_7->setText(QString::number((int)CLeftArm->GetMotor_Velocity(6)));
+	ui->Leftarm_label_PresentVelocity_8->setText(QString::number((int)CLeftArm->GetMotor_Velocity(7)));
 	// Torque
 	ui->Leftarm_label_PresentTorque->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(0)));
 	ui->Leftarm_label_PresentTorque_2->setText(QString::number((int)CLeftArm->GetMotor_PresentTorque(1)));
@@ -147,14 +147,14 @@ void Form_Arm::Display()
 	ui->Rightarm_label_PresentAngle_7->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(6)));
 	ui->Rightarm_label_PresentAngle_8->setText(QString::number((int)CRightArm->GetMotor_PresentAngle(7)));
 	// Velocity
-	ui->Rightarm_label_PresentVelocity->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(0)));
-	ui->Rightarm_label_PresentVelocity_2->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(1)));
-	ui->Rightarm_label_PresentVelocity_3->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(2)));
-	ui->Rightarm_label_PresentVelocity_4->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(3)));
-	ui->Rightarm_label_PresentVelocity_5->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(4)));
-	ui->Rightarm_label_PresentVelocity_6->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(5)));
-	ui->Rightarm_label_PresentVelocity_7->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(6)));
-	ui->Rightarm_label_PresentVelocity_8->setText(QString::number((int)CRightArm->GetMotor_PresentVelocity(7)));
+	ui->Rightarm_label_PresentVelocity->setText(QString::number((int)CRightArm->GetMotor_Velocity(0)));
+	ui->Rightarm_label_PresentVelocity_2->setText(QString::number((int)CRightArm->GetMotor_Velocity(1)));
+	ui->Rightarm_label_PresentVelocity_3->setText(QString::number((int)CRightArm->GetMotor_Velocity(2)));
+	ui->Rightarm_label_PresentVelocity_4->setText(QString::number((int)CRightArm->GetMotor_Velocity(3)));
+	ui->Rightarm_label_PresentVelocity_5->setText(QString::number((int)CRightArm->GetMotor_Velocity(4)));
+	ui->Rightarm_label_PresentVelocity_6->setText(QString::number((int)CRightArm->GetMotor_Velocity(5)));
+	ui->Rightarm_label_PresentVelocity_7->setText(QString::number((int)CRightArm->GetMotor_Velocity(6)));
+	ui->Rightarm_label_PresentVelocity_8->setText(QString::number((int)CRightArm->GetMotor_Velocity(7)));
 	// Torque
 	ui->Rightarm_label_PresentTorque->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(0)));
 	ui->Rightarm_label_PresentTorque_2->setText(QString::number((int)CRightArm->GetMotor_PresentTorque(1)));
@@ -184,10 +184,10 @@ void Form_Arm::isOK(bool checked_thing, QLabel *label)
 
 void Form_Arm::Red(QLabel *label)
 {
-	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLabel { background-color : rgb(255,0,0)}"));
+	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLabel { background-color: rgb(255, 60, 63)}"));
 }
 
 void Form_Arm::Green(QLabel *label)
 {
-	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLabel { background-color : rgb(0,255,0)}"));
+	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLabel { background-color: rgb(170, 255, 127)}"));
 }

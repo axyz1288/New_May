@@ -107,14 +107,14 @@ void Form_Body::Display()
 {
 	while (!_is_deleted_thread_display)
 	{
-		// if (ui->Correction->currentIndex() == 0)
-		// 	form_arm->Display();
-		// else if (ui->Correction->currentIndex() == 1)
-		// 	form_mobile->Display();
-		// else if (ui->Correction->currentIndex() == 2)
-		// 	form_head->Display();
-		// else
-		// 	;
+		if (ui->Correction->currentIndex() == 0)
+			form_arm->Display();
+		else if (ui->Correction->currentIndex() == 1)
+			form_mobile->Display();
+		else if (ui->Correction->currentIndex() == 2)
+			form_head->Display();
+		else
+			;
 		this_thread::sleep_for(chrono::milliseconds(waiting_delay_ms));
 	}
 }

@@ -47,11 +47,11 @@ void Form_Head::isOK(bool checked_thing, QLabel *label)
 
 void Form_Head::Red(QLabel *label)
 {
-	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLabel { background-color : rgb(255,0,0)}"));
+	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLabel { background-color: rgb(255, 60, 63)}"));
 }
 
 void Form_Head::Green(QLabel *label)
 {
-	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLabel { background-color : rgb(0,255,0)}"));
+	QMetaObject::invokeMethod(label, "setStyleSheet", Qt::QueuedConnection, Q_ARG(QString, "QLabel { background-color: rgb(170, 255, 127)}"));
 }
 
